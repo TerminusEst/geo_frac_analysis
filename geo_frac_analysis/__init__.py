@@ -375,7 +375,7 @@ class FracAnalysisPoly:
 
 		#Save shapefile
 		w.save(address_out)
-		print "Saved output to " + out_file
+		print "Saved output to " + address_out
 
 ################################################################################
 ################################################################################
@@ -540,7 +540,7 @@ class FracAnalysisPoint:
 
 		#Save shapefile
 		w.save(address_out)
-		print "Saved output to " + out_file
+		print "Saved output to " + address_out
 
 ################################################################################
 ################################################################################

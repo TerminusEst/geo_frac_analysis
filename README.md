@@ -56,7 +56,7 @@ numpy
 ##**Author**
 Written by Sean Blake in Trinity College Dublin, 2014-2016
 
-Email: blakese@tcd.ie
+Email: blakese__at__tcd.ie
 
 GITHUB: https://github.com/TerminusEst
 

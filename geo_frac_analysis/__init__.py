@@ -92,7 +92,7 @@ def angle_calc(x1, y1, x2, y2):
 	x = x1 - x2
 	y = y1 - y2
 
-	anglez = numpy.degrees(numpy.arctan2(x, y))
+	anglez = np.degrees(np.arctan2(x, y))
 	if anglez < 0:
 		anglez += + 180
 
@@ -144,7 +144,7 @@ def liangbarsky(left, top, right, bottom, x1, y1, x2, y2):
 	x1 = x1 + (dt0 * dx)
 	y1 = y1 + (dt0 * dy)
 
-	distance = math.hypot(x2 - x1, y2 - y1)
+	distance = np.hypot(x2 - x1, y2 - y1)
 	return distance, x1, y1, x2, y2
 
 ################################################################################
@@ -546,7 +546,7 @@ class FracAnalysisPoint:
 ################################################################################
 ################################################################################
 
-def FancyPlot(FracAnalyzed, Rose = True, Fractures = True, Patches = True, Circles = False, SquareNumbers = False, Title = "", FigureNumber = 1):
+def FancyPlot(FracAnalyzed, Rose = True, Fractures = True, Patches = False, Circles = False, SquareNumbers = False, Title = "", FigureNumber = 1):
 
 	"""Plots the point_number_density 
 

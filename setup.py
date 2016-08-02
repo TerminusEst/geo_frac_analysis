@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='geo_frac_analysis',
-      version='0.1.2',
+      version='0.1.3',
       description='Python module for the spatial analysis of geological fractures.',
       long_description='Python module for the spatial analysis of geological fractures using shapefiles.',
       keywords='geological spatial fracture analysis',

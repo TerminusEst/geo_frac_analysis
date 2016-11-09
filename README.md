@@ -23,28 +23,40 @@ Single or multiple analysed shapefiles can then be put into a fancy plot with ro
 ## **Quick Code Example**
 Import the module:
 
-`>>> import geo_frac_analysis as GFA`
+```python
+>>> import geo_frac_analysis as GFA
+```
 
 Set address for shapefile which contains polyline fractures.
 
-`>>> address1 = "/Data/wexfaults.dbf"`
+```python
+>>> address1 = "/Data/wexfaults.dbf"
+```
 
 Set the cell size to be 10km, and angle bins per 180 degrees to be 3 (i.e., 30 degree bins):
 
-`>>> cell_size, angle_bins = 10, 3`
+```python
+>>> cell_size, angle_bins = 10, 3
+```
 
 Create the FracAnalysisPoly object:
 
-`>>> a = GFA.FracAnalysisPoly(address1, cell_size, angle_bins)`
+```python
+>>> a = GFA.FracAnalysisPoly(address1, cell_size, angle_bins)
+```
 
 Plot the analysed data with number density patches:
 
-`>>> GFA.FancyPlot(a, patches = "Number")`
+```python
+>>> GFA.FancyPlot(a, patches = "Number")
+```
 
 ##**Installation**
 To install using pip:
 
-`pip install geo_frac_analysis`
+```python
+pip install geo_frac_analysis
+```
 
 ##**Dependencies**
 pyshp

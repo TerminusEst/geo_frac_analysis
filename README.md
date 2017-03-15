@@ -17,8 +17,7 @@ Analysis outputs include:
 4. Group Dominance Frequency (GDF).
 
 Single or multiple analysed shapefiles can then be put into a fancy plot with rose diagrams like so:
-![alt text][First]
-[First]: https://cloud.githubusercontent.com/assets/20742138/17325319/d67d1608-58a2-11e6-8e6b-59bd155cb080.png "Ireland, 100k Fracture Map"
+![First](https://cloud.githubusercontent.com/assets/20742138/17325319/d67d1608-58a2-11e6-8e6b-59bd155cb080.png) "Ireland, 100k Fracture Map"
 
 ## **Quick Code Example**
 Import the module:
@@ -79,20 +78,17 @@ Uses the MIT license.
 Using **a** as our analysed polyline object (see quick example above), the basic plot
 
 `>>> GFA.FancyPlot(a)` gives the following plot:
-![alt text][2nd]
-[2nd]: https://cloud.githubusercontent.com/assets/20742138/17325972/6819e1f6-58a6-11e6-8a93-69a8fd4405fb.png "Basic Plot"
+![2nd](https://cloud.githubusercontent.com/assets/20742138/17325972/6819e1f6-58a6-11e6-8a93-69a8fd4405fb.png) "Basic Plot"
 
 To include squares (size = cell_size) showing number density, we can call:
 
 `>>> GFA.FancyPlot(a, Patches = "Number")` Patches can also equal "Length" or "NumberAnisotropy"
-![alt text][3rd]
-[3rd]: https://cloud.githubusercontent.com/assets/20742138/17326097/119ca132-58a7-11e6-9c67-be9c4ac84d89.png "Basic Plot + Patches"
+![3rd](https://cloud.githubusercontent.com/assets/20742138/17326097/119ca132-58a7-11e6-9c67-be9c4ac84d89.png) "Basic Plot + Patches"
 
 An example of the plot working with all of the bells and whistles:
 
 `>>> GFA.FancyPlot(a, Rose = True, Fractures = True, Patches = "NumberAnisotropy", Circles = True, SquareNumbers = True, FigureNumber = 1)`
-![alt text][4th]
-[4th]: https://cloud.githubusercontent.com/assets/20742138/17326180/76581b24-58a7-11e6-8206-a046e9338b2b.png "Fancy Plot"
+![4th](https://cloud.githubusercontent.com/assets/20742138/17326180/76581b24-58a7-11e6-8206-a046e9338b2b.png) "Fancy Plot"
 
 Suppose we had another shapefile of a different region, and we wanted to plot them together. We can simply do the following:
 
@@ -102,8 +98,7 @@ Suppose we had another shapefile of a different region, and we wanted to plot th
 >>> analysed_list = [a, b]
 >>> GFA.FancyPlot(analysed_list, Rose = True, Fractures = True, Patches = "NumberAnisotropy", Circles = True, SquareNumbers = True, FigureNumber = 1)
 ```
-![alt text][5th]
-[5th]: https://cloud.githubusercontent.com/assets/20742138/17328810/9b4708d6-58b7-11e6-9835-451495146d92.png "Fancy Plot"
+![5th](https://cloud.githubusercontent.com/assets/20742138/17328810/9b4708d6-58b7-11e6-9835-451495146d92.png) "Fancy Plot"
 
 Shapefiles which contain points can also be added:
 ```
@@ -112,15 +107,13 @@ Shapefiles which contain points can also be added:
 >>> analysed_list.append(p)
 >>> GFA.FancyPlot(analysed_list, Rose = True, Fractures = True, Patches = "Number", Circles = False, SquareNumbers = False, FigureNumber = 1)
 ```
-![alt text][6th]
-[6th]: https://cloud.githubusercontent.com/assets/20742138/17328979/5db2638e-58b8-11e6-893e-b0870d75e7bd.png "Fancy Plot"
+![6th](https://cloud.githubusercontent.com/assets/20742138/17328979/5db2638e-58b8-11e6-893e-b0870d75e7bd.png) "Fancy Plot"
 **NOTE** No length analysis can be undertaken on a group of analysed shapefiles if one or more of them contain points.
 
 If you want to plot one rose diagram per region, we use the second plotting function:
 
 `GFA.FancyPlotTotals(analysed_list, Fractures = True, Circles = True, FigureNumber = 1)`
-![alt text][7th]
-[7th]: https://cloud.githubusercontent.com/assets/20742138/17329097/f150c540-58b8-11e6-9707-2fd6b9bad04c.png "Fancy Plot"
+![7th](https://cloud.githubusercontent.com/assets/20742138/17329097/f150c540-58b8-11e6-9707-2fd6b9bad04c.png) "Fancy Plot"
 
 Now that you are happy with the analysis, you can save the analysed data from **a** into a shapefile. This can be done as follows:
 

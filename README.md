@@ -1,4 +1,4 @@
-#**Geological Fracture Analysis**
+**Geological Fracture Analysis**
 =================================
 
 A Python module for the spatial analysis of geological fractures from shapefile data. Includes plotting functions.
@@ -17,7 +17,7 @@ Analysis outputs include:
 4. Group Dominance Frequency (GDF).
 
 Single or multiple analysed shapefiles can then be put into a fancy plot with rose diagrams like so:
-![First](https://cloud.githubusercontent.com/assets/20742138/17325319/d67d1608-58a2-11e6-8e6b-59bd155cb080.png) "Ireland, 100k Fracture Map"
+![First](https://cloud.githubusercontent.com/assets/20742138/17325319/d67d1608-58a2-11e6-8e6b-59bd155cb080.png)
 
 ## **Quick Code Example**
 Import the module:
@@ -50,21 +50,21 @@ Plot the analysed data with number density patches:
 >>> GFA.FancyPlot(a, patches = "Number")
 ```
 
-##**Installation**
+## **Installation**
 To install using pip:
 
 ```python
 pip install geo_frac_analysis
 ```
 
-##**Dependencies**
+## **Dependencies**
 pyshp
 
 matplotlib
 
 numpy
 
-##**Author**
+## **Author**
 Written by Sean Blake in Trinity College Dublin, 2014-2016
 
 Email: blakese__at__tcd.ie
@@ -73,22 +73,21 @@ GITHUB: https://github.com/TerminusEst
 
 Uses the MIT license.
 
-##**Detailed Use**
+## **Detailed Use**
 
 Using **a** as our analysed polyline object (see quick example above), the basic plot
 
 `>>> GFA.FancyPlot(a)` gives the following plot:
-![2nd](https://cloud.githubusercontent.com/assets/20742138/17325972/6819e1f6-58a6-11e6-8a93-69a8fd4405fb.png) "Basic Plot"
-
+![2nd](https://cloud.githubusercontent.com/assets/20742138/17325972/6819e1f6-58a6-11e6-8a93-69a8fd4405fb.png)
 To include squares (size = cell_size) showing number density, we can call:
 
 `>>> GFA.FancyPlot(a, Patches = "Number")` Patches can also equal "Length" or "NumberAnisotropy"
-![3rd](https://cloud.githubusercontent.com/assets/20742138/17326097/119ca132-58a7-11e6-9c67-be9c4ac84d89.png) "Basic Plot + Patches"
+![3rd](https://cloud.githubusercontent.com/assets/20742138/17326097/119ca132-58a7-11e6-9c67-be9c4ac84d89.png)
 
 An example of the plot working with all of the bells and whistles:
 
 `>>> GFA.FancyPlot(a, Rose = True, Fractures = True, Patches = "NumberAnisotropy", Circles = True, SquareNumbers = True, FigureNumber = 1)`
-![4th](https://cloud.githubusercontent.com/assets/20742138/17326180/76581b24-58a7-11e6-8206-a046e9338b2b.png) "Fancy Plot"
+![4th](https://cloud.githubusercontent.com/assets/20742138/17326180/76581b24-58a7-11e6-8206-a046e9338b2b.png)
 
 Suppose we had another shapefile of a different region, and we wanted to plot them together. We can simply do the following:
 
@@ -98,7 +97,7 @@ Suppose we had another shapefile of a different region, and we wanted to plot th
 >>> analysed_list = [a, b]
 >>> GFA.FancyPlot(analysed_list, Rose = True, Fractures = True, Patches = "NumberAnisotropy", Circles = True, SquareNumbers = True, FigureNumber = 1)
 ```
-![5th](https://cloud.githubusercontent.com/assets/20742138/17328810/9b4708d6-58b7-11e6-9835-451495146d92.png) "Fancy Plot"
+![5th](https://cloud.githubusercontent.com/assets/20742138/17328810/9b4708d6-58b7-11e6-9835-451495146d92.png)
 
 Shapefiles which contain points can also be added:
 ```
@@ -107,13 +106,13 @@ Shapefiles which contain points can also be added:
 >>> analysed_list.append(p)
 >>> GFA.FancyPlot(analysed_list, Rose = True, Fractures = True, Patches = "Number", Circles = False, SquareNumbers = False, FigureNumber = 1)
 ```
-![6th](https://cloud.githubusercontent.com/assets/20742138/17328979/5db2638e-58b8-11e6-893e-b0870d75e7bd.png) "Fancy Plot"
+![6th](https://cloud.githubusercontent.com/assets/20742138/17328979/5db2638e-58b8-11e6-893e-b0870d75e7bd.png)
 **NOTE** No length analysis can be undertaken on a group of analysed shapefiles if one or more of them contain points.
 
 If you want to plot one rose diagram per region, we use the second plotting function:
 
 `GFA.FancyPlotTotals(analysed_list, Fractures = True, Circles = True, FigureNumber = 1)`
-![7th](https://cloud.githubusercontent.com/assets/20742138/17329097/f150c540-58b8-11e6-9707-2fd6b9bad04c.png) "Fancy Plot"
+![7th](https://cloud.githubusercontent.com/assets/20742138/17329097/f150c540-58b8-11e6-9707-2fd6b9bad04c.png)
 
 Now that you are happy with the analysis, you can save the analysed data from **a** into a shapefile. This can be done as follows:
 
